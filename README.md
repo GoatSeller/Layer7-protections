@@ -9,4 +9,6 @@
 git clone https://github.com/GoatSeller/Layer7-protections.git
 cd Layer7-protections/
 yarn
+tsc
+cd bin/
 ```
