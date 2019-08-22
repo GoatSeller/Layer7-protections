@@ -11,4 +11,5 @@ cd Layer7-protections/
 yarn
 tsc
 cd bin/
+node app.js
 ```
