@@ -1,0 +1,15 @@
+{
+  "name": "Layer7-protections",
+  "version": "0.0.2",
+  "description": "Simple layer7 protections written in typescript",
+  "main": "index.js",
+  "repository": "https://github.com/GoatSeller/Layer7-protections.git",
+  "author": "Renegage <renegage7@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.17.1",
+    "child_process": "^1.0.2",
+    "express": "^4.17.1",
+    "ip2proxy-nodejs": "^2.1.0"
+  }
+}
