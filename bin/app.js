@@ -4,9 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
-var controllers_1 = require("./controllers");
+var controllers_1 = __importDefault(require("./controllers"));
 var app = express_1.default();
-app.get("/", controllers_1.index);
+app.get("/", controllers_1.default);
 app.listen(8080, "0.0.0.0", function () {
     console.log("Server started");
 });

@@ -39,7 +39,7 @@ var dropIp = function (ip) {
     });
 };
 var onError = function (error) {
-    console.log(error);
+    console.error(error);
     return false;
 };
 exports.default = checkIp;
