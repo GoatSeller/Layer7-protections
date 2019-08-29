@@ -1,24 +1,10 @@
-import express from 'express';
-import { Check } from "./checkip";
+import express from "express";
+import { index } from "./controllers";
 
-const check = new Check();
+const app: express.Application = express();
 
-const app = express();
+app.get("/", index);
 
-app.get('/', (req: express.Request, res: express.Response) => {
-
-    let ip: string | undefined = req.connection.remoteAddress;
-
-    if (typeof ip === undefined) {
-        console.log('[ERROR] Invalid IP');
-    } else {
-        res.send('IP: '+ ip);
-    }
-
-    check.checkIp(ip);
-
-});
-
-app.listen(8080, '0.0.0.0', () => {
-    console.log('Server started')
+app.listen(8080, "0.0.0.0", () => {
+  console.log("Server started");
 });

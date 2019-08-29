@@ -11,5 +11,8 @@
     "child_process": "^1.0.2",
     "express": "^4.17.1",
     "ip2proxy-nodejs": "^2.1.0"
+  },
+  "devDependencies": {
+    "prettier": "1.18.2"
   }
 }
