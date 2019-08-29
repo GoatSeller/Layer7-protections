@@ -1,5 +1,5 @@
 import express from "express";
-import { index } from "./controllers";
+import index from "./controllers";
 
 const app: express.Application = express();
 
