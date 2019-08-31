@@ -10,3 +10,4 @@ app.get("/", controllers_1.default);
 app.listen(8080, "0.0.0.0", function () {
     console.log("Server started");
 });
+//# sourceMappingURL=app.js.map

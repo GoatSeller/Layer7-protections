@@ -1,5 +1,5 @@
 import express from "express";
-import checkIp from "../checkip";
+import { checkIp } from "../checkip";
 
 const index = (req: express.Request, res: express.Response) => {
   let ip: string | undefined = req.connection.remoteAddress;

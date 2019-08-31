@@ -1,45 +1,47 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ip2proxy = require("ip2proxy-nodejs");
-var file = "IP2PROXY-LITE-PX1.BIN";
+var database_file = "IP2PROXY-LITE-PX1.BIN";
 var exec = require("child_process").exec;
-var checkIp = function (ip) {
-    openFile(file)
+exports.checkIp = function (ip) {
+    exports.openFile(database_file)
         .then(function () {
-        isProxy(ip)
+        exports.isProxy(ip)
             .then(function () {
-            dropIp(ip)
+            exports.dropIp(ip)
                 .then(function () {
                 console.log("Ip dropped");
                 return true;
             })
-                .catch(onError);
+                .catch(exports.onError);
         })
-            .catch(function () {
-            console.log("Is not a proxy");
-        });
+            .catch(exports.onError);
     })
-        .catch(onError);
+        .catch(exports.onError);
 };
-var openFile = function (file) {
+exports.openFile = function (file) {
     return new Promise(function (resolve, reject) {
-        ip2proxy.Open(file) === 0 ? resolve() : reject(new Error("Cant open file"));
+        ip2proxy.Open(file) === 0
+            ? resolve("it works")
+            : reject(new Error("Cant open file"));
     });
 };
-var isProxy = function (ip) {
+exports.isProxy = function (ip) {
     return new Promise(function (resolve, reject) {
-        ip2proxy.isProxy(ip) === 1 ? resolve() : reject();
+        ip2proxy.isProxy(ip) === 1
+            ? resolve("it works")
+            : reject(new Error("Is not a proxy"));
     });
 };
-var dropIp = function (ip) {
+exports.dropIp = function (ip) {
     return new Promise(function (resolve, reject) {
         exec("iptables -A INPUT -s " + ip + " -j DROP", function (result, err) {
-            err ? resolve(result) : reject(new Error("Cant drop ip"));
+            err ? reject(new Error("Cant drop ip")) : resolve("it works");
         });
     });
 };
-var onError = function (error) {
+exports.onError = function (error) {
     console.error(error);
     return false;
 };
-exports.default = checkIp;
+//# sourceMappingURL=checkip.js.map
