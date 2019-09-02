@@ -11,7 +11,7 @@ export const checkIp = (ip: string | undefined) => {
         .then(() => {
           dropIp(ip)
             .then(() => {
-              console.log("Ip dropped");
+              console.log("Success");
               return true;
             })
             .catch(onError);
