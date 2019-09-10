@@ -1,10 +1,6 @@
 /node_modules
 /.vscode
 yarn-error.log
-/dist
-/.idea
-/test
-/bin
 /.nyc_output
 /coverage
-/test
+/.idea
