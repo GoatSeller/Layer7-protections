@@ -1,8 +1,8 @@
-import openFile from "./utils/openfile";
-import isProxy from "./utils/isproxy";
-import dropIp from "./utils/dropip";
-import onError from "./utils/onerror";
-const database_file: string = "IP2PROXY-LITE-PX1.BIN";
+import openFile from './utils/openfile';
+import isProxy from './utils/isproxy';
+import dropIp from './utils/dropip';
+import onError from './utils/onerror';
+const database_file: string = 'IP2PROXY-LITE-PX1.BIN';
 
 export const checkIp = (ip: string | undefined) => {
   openFile(database_file)
@@ -11,7 +11,7 @@ export const checkIp = (ip: string | undefined) => {
         .then(() => {
           dropIp(ip)
             .then(() => {
-              console.log("Success");
+              console.log('Success');
               return true;
             })
             .catch(onError);
