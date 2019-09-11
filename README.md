@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/GoatSeller/Layer7-protections.svg?branch=master)](https://travis-ci.org/GoatSeller/Layer7-protections)
 # Layer7-protections
 > Simple layer7 protections made in NodeJS
 ## Packages
