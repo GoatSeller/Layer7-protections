@@ -3,7 +3,7 @@ import openFile from '../src/utils/openfile';
 import isProxy from '../src/utils/isproxy';
 import dropIp from '../src/utils/dropip';
 import onError from '../src/utils/onerror';
-import { database_file } from '../src/checkip';
+import { database_file } from '../src';
 
 describe('openFileYES', () => {
   it('should open file', (done: any) => {
