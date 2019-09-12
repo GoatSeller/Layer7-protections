@@ -1,13 +1,11 @@
 {
-  "name": "layer7-protections",
-  "version": "0.0.2",
+  "name": "npm-layer7-protections",
+  "version": "1.0.2",
   "description": "Simple layer7 protections written in typescript",
   "main": "index.js",
   "scripts": {
     "test:coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
-    "test": "nyc mocha --require ts-node/register --require source-map-support/register --recursive ./test/*.spec.ts",
-    "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test",
-    "testmocha": "./node_modules/.bin/mocha --require ts-node/register ./test/*.spec.ts"
+    "test": "nyc mocha --require ts-node/register --require source-map-support/register --recursive ./test/*.spec.ts"
   },
   "repository": "https://github.com/GoatSeller/Layer7-protections.git",
   "author": "GoatSeller",
