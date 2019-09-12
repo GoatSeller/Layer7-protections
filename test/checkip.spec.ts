@@ -7,7 +7,7 @@ import { database_file } from '../src/checkip';
 
 describe('openFileYES', () => {
   it('should open file', (done: any) => {
-    openFile(database_file)
+    openFile('bin/' + database_file)
       .then((res: string) => {
         assert.equal(res, 'it works', 'Value should be it works');
         done();
