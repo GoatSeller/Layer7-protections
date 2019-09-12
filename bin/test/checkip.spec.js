@@ -1,14 +1,19 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var chai_1 = require("chai");
-var checkip_1 = require("../src/checkip");
-// "oldtest": "./node_modules/.bin/mocha ts-node/register ./test/*.spec.ts",
-describe("openFileYES", function () {
-    it("should open file", function (done) {
-        var database_file = "bin/IP2PROXY-LITE-PX1.BIN";
-        checkip_1.openFile(database_file)
+var openfile_1 = __importDefault(require("../src/utils/openfile"));
+var isproxy_1 = __importDefault(require("../src/utils/isproxy"));
+var dropip_1 = __importDefault(require("../src/utils/dropip"));
+var onerror_1 = __importDefault(require("../src/utils/onerror"));
+describe('openFileYES', function () {
+    it('should open file', function (done) {
+        var database_file = 'bin/IP2PROXY-LITE-PX1.BIN';
+        openfile_1.default(database_file)
             .then(function (res) {
-            chai_1.assert.equal(res, "it works", "Value should be it works");
+            chai_1.assert.equal(res, 'it works', 'Value should be it works');
             done();
         })
             .catch(function (err) {
@@ -16,12 +21,12 @@ describe("openFileYES", function () {
         });
     });
 });
-describe("openFileNO", function () {
-    it("should not open file", function (done) {
-        var database_file = "asd";
-        checkip_1.openFile(database_file)
+describe('openFileNO', function () {
+    it('should not open file', function (done) {
+        var database_file = 'asd';
+        openfile_1.default(database_file)
             .then(function () {
-            throw new Error("Cant open file");
+            throw new Error('Cant open file');
         })
             .catch(function (err) {
             chai_1.assert.isDefined(err);
@@ -29,12 +34,12 @@ describe("openFileNO", function () {
         });
     });
 });
-describe("isProxyYES", function () {
-    it("should be a proxy", function (done) {
-        var ip = "213.100.168.84";
-        checkip_1.isProxy(ip)
+describe('isProxyYES', function () {
+    it('should be a proxy', function (done) {
+        var ip = '213.100.168.84';
+        isproxy_1.default(ip)
             .then(function (res) {
-            chai_1.assert.equal(res, "it works", "Value should be it works");
+            chai_1.assert.equal(res, 'it works', 'Value should be it works');
             done();
         })
             .catch(function (err) {
@@ -42,12 +47,12 @@ describe("isProxyYES", function () {
         });
     });
 });
-describe("isProxyNO", function () {
-    it("should not be a proxy", function (done) {
-        var ip = "1.1.1.1";
-        checkip_1.isProxy(ip)
+describe('isProxyNO', function () {
+    it('should not be a proxy', function (done) {
+        var ip = '1.1.1.1';
+        isproxy_1.default(ip)
             .then(function () {
-            done(new Error("Is not a proxy"));
+            done(new Error('Is not a proxy'));
         })
             .catch(function (err) {
             chai_1.assert.isDefined(err);
@@ -55,12 +60,12 @@ describe("isProxyNO", function () {
         });
     });
 });
-describe("dropIpYES", function () {
-    it("should be dropped", function (done) {
-        var ip = "127.0.0.1";
-        checkip_1.dropIp(ip)
+describe('dropIpYES', function () {
+    it('should be dropped', function (done) {
+        var ip = '127.0.0.1';
+        dropip_1.default(ip)
             .then(function (result) {
-            chai_1.assert.equal(result, "it works", "Value should be it works");
+            chai_1.assert.equal(result, 'it works', 'Value should be it works');
             done();
         })
             .catch(function (err) {
@@ -68,12 +73,12 @@ describe("dropIpYES", function () {
         });
     });
 });
-describe("dropIpNO", function () {
-    it("should not be dropped", function (done) {
-        var ip = "127.0.0.1";
-        checkip_1.dropIp(ip)
+describe('dropIpNO', function () {
+    it('should not be dropped', function (done) {
+        var ip = '127.0.0.1';
+        dropip_1.default(ip)
             .then(function () {
-            throw new Error("Cant drop ip");
+            throw new Error('Cant drop ip');
         })
             .catch(function (err) {
             chai_1.assert.isDefined(err);
@@ -81,9 +86,9 @@ describe("dropIpNO", function () {
         });
     });
 });
-describe("onError", function () {
-    it("should be an error", function (done) {
-        chai_1.assert.isBoolean(checkip_1.onError("error"));
+describe('onError', function () {
+    it('should be an error', function (done) {
+        chai_1.assert.isBoolean(onerror_1.default('error'));
         done();
     });
 });
