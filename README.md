@@ -1,11 +1,21 @@
 [![Build Status](https://travis-ci.org/GoatSeller/Layer7-protections.svg?branch=master)](https://travis-ci.org/GoatSeller/Layer7-protections)
 [![Coverage Status](https://coveralls.io/repos/github/GoatSeller/Layer7-protections/badge.svg?branch=master)](https://coveralls.io/github/GoatSeller/Layer7-protections?branch=master)
 # Layer7-protections
-> Simple layer7 protections made in NodeJS
-## Packages
-* [child_process](https://www.npmjs.com/package/child_process)
-* [ip2proxy-nodejs](https://www.npmjs.com/package/ip2proxy-nodejs)
+> Simple layer7 protections written in typescript, now is in BETA
 ## Setup
+
+### npm
 ```
 npm install npm-layer7-protections
+```
+### yarn
+```
+yarn add npm-layer7-protections
+```
+## Usage
+```javascript
+const { isProxy, dropIp, checkIp } = require('npm-layer7-protections');
+isProxy(IP);
+dropIp(IP);
+checkIp(IP, 'IP2PROXY_DATABASE_FILE.bin'); // installable from https://lite.ip2location.com/database/px1-ip-country
 ```
