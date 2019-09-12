@@ -3,6 +3,13 @@
   "version": "1.0.2",
   "description": "Simple layer7 protections written in typescript",
   "main": "index.js",
+  "keywords": [
+    "ddos-protections",
+    "layer7",
+    "firewall",
+    "iptables",
+    "ddos"
+  ],
   "scripts": {
     "test:coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "test": "nyc mocha --require ts-node/register --require source-map-support/register --recursive ./test/*.spec.ts"
