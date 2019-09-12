@@ -3,10 +3,10 @@ import openFile from '../src/utils/openfile';
 import isProxy from '../src/utils/isproxy';
 import dropIp from '../src/utils/dropip';
 import onError from '../src/utils/onerror';
+import { database_file } from '../src/checkip';
 
 describe('openFileYES', () => {
   it('should open file', (done: any) => {
-    const database_file: string = 'bin/IP2PROXY-LITE-PX1.BIN';
     openFile(database_file)
       .then((res: string) => {
         assert.equal(res, 'it works', 'Value should be it works');
@@ -20,8 +20,8 @@ describe('openFileYES', () => {
 
 describe('openFileNO', () => {
   it('should not open file', (done: any) => {
-    const database_file: string = 'asd';
-    openFile(database_file)
+    const database_file2: string = 'asd';
+    openFile(database_file2)
       .then(() => {
         throw new Error('Cant open file');
       })

@@ -7,9 +7,9 @@ var openfile_1 = __importDefault(require("./utils/openfile"));
 var isproxy_1 = __importDefault(require("./utils/isproxy"));
 var dropip_1 = __importDefault(require("./utils/dropip"));
 var onerror_1 = __importDefault(require("./utils/onerror"));
-var database_file = 'IP2PROXY-LITE-PX1.BIN';
+exports.database_file = 'IP2PROXY.BIN';
 exports.checkIp = function (ip) {
-    openfile_1.default(database_file)
+    openfile_1.default(exports.database_file)
         .then(function () {
         isproxy_1.default(ip)
             .then(function () {
