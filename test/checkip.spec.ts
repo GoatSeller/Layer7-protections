@@ -22,7 +22,7 @@ describe('openFileNO', () => {
   it('should not open file', (done: any) => {
     const database_file: string = 'asd';
     openFile(database_file)
-      .then(() => {
+      .then((res: string) => {
         throw new Error('Cant open file');
       })
       .catch((err: any) => {
