@@ -1,3 +1,4 @@
+[![Package version](https://img.shields.io/npm/v/npm-layer7-protections)](https://www.npmjs.com/package/npm-layer7-protections)
 [![Build Status](https://travis-ci.org/GoatSeller/Layer7-protections.svg?branch=master)](https://travis-ci.org/GoatSeller/Layer7-protections)
 [![Coverage Status](https://coveralls.io/repos/github/GoatSeller/Layer7-protections/badge.svg?branch=master)](https://coveralls.io/github/GoatSeller/Layer7-protections?branch=master)
 # Layer7-protections
