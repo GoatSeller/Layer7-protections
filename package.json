@@ -4,6 +4,7 @@
   "description": "Simple layer7 protections written in typescript",
   "main": "index.js",
   "scripts": {
+    "test:coveralls": "nyc --coverage --coverageReporters=text-lcov | coveralls",
     "test": "nyc mocha --require ts-node/register --require source-map-support/register --recursive ./test/*.spec.ts",
     "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test",
     "testmocha": "./node_modules/.bin/mocha --require ts-node/register ./test/*.spec.ts"
@@ -29,6 +30,7 @@
     "@types/chai": "^4.2.0",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
+    "coveralls": "^3.0.6",
     "mocha": "^6.2.0",
     "nyc": "^14.1.1",
     "prettier": "1.18.2",
