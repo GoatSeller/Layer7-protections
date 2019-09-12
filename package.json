@@ -1,8 +1,9 @@
 {
   "name": "npm-layer7-protections",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Simple layer7 protections written in typescript",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "keywords": [
     "ddos-protections",
     "layer7",
@@ -11,6 +12,7 @@
     "ddos"
   ],
   "scripts": {
+    "build": "tsc",
     "test:coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "test": "nyc mocha --require ts-node/register --require source-map-support/register --recursive ./test/*.spec.ts"
   },

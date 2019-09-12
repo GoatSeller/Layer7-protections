@@ -7,7 +7,7 @@ import { database_file } from '../src';
 
 describe('openFileYES', () => {
   it('should open file', (done: any) => {
-    openFile('bin/' + database_file)
+    openFile('dist/' + database_file)
       .then((res: string) => {
         assert.equal(res, 'it works', 'Value should be it works');
         done();
