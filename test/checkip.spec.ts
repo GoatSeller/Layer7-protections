@@ -1,4 +1,4 @@
-import { assert, expect } from 'chai';
+import { assert } from 'chai';
 import openFile from '../src/utils/openfile';
 import isProxy from '../src/utils/isproxy';
 import dropIp from '../src/utils/dropip';
@@ -22,7 +22,7 @@ describe('openFileNO', () => {
   it('should not open file', (done: any) => {
     const database_file: string = 'asd';
     openFile(database_file)
-      .then((res: string) => {
+      .then(() => {
         throw new Error('Cant open file');
       })
       .catch((err: any) => {
