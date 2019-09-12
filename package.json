@@ -23,8 +23,7 @@
     "extension": [
       ".ts",
       ".tsx"
-    ],
-    "all": true
+    ]
   },
   "devDependencies": {
     "@types/chai": "^4.2.0",
