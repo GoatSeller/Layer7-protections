@@ -19,6 +19,6 @@ isProxy(IP);
 dropIp(IP);
 checkIp(IP, 'IP2PROXY_DATABASE_FILE.bin'); // installable from https://lite.ip2location.com/database/px1-ip-country
 /*
- * checkIp uses both modules: isProxy and droIp
+ * checkIp uses both modules: isProxy and dropIp
 */
 ```
