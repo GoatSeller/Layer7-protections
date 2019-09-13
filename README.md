@@ -2,6 +2,7 @@
 [![Package status](https://img.shields.io/npm/dm/npm-layer7-protections.svg)](https://www.npmjs.com/package/npm-layer7-protections)
 [![Build Status](https://travis-ci.org/GoatSeller/Layer7-protections.svg?branch=master)](https://travis-ci.org/GoatSeller/Layer7-protections)
 [![Coverage Status](https://coveralls.io/repos/github/GoatSeller/Layer7-protections/badge.svg?branch=master)](https://coveralls.io/github/GoatSeller/Layer7-protections?branch=master)
+[![Known Vulnerabilities](https://snyk.io//test/github/GoatSeller/Layer7-protections/badge.svg?targetFile=package.json)](https://snyk.io//test/github/GoatSeller/Layer7-protections?targetFile=package.json)
 # Layer7-protections
 > Tested on linux based systems using iptables.
 ## Setup
