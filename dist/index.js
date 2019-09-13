@@ -11,16 +11,13 @@ exports.database_file = 'IP2PROXY.BIN';
 exports.checkIp = function (ip, path_file) {
     openfile_1.default(path_file)
         .then(function () {
-        isproxy_1.default(ip)
-            .then(function () {
-            dropip_1.default(ip)
-                .then(function () {
-                console.log('Success');
-                return true;
-            })
-                .catch(onerror_1.default);
-        })
-            .catch(onerror_1.default);
+        return isproxy_1.default(ip);
+    })
+        .then(function () {
+        return dropip_1.default(ip);
+    })
+        .then(function () {
+        console.log('Success');
     })
         .catch(onerror_1.default);
 };
