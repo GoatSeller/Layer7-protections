@@ -5,14 +5,14 @@
 [![Known Vulnerabilities](https://snyk.io//test/github/GoatSeller/Layer7-protections/badge.svg?targetFile=package.json)](https://snyk.io//test/github/GoatSeller/Layer7-protections?targetFile=package.json)
 # Layer7-protections
 > Tested on linux based systems using iptables.
-## Setup
+## Installation
 
 ### npm
-```
+```sh
 npm install npm-layer7-protections
 ```
 ### yarn
-```
+```sh
 yarn add npm-layer7-protections
 ```
 ## Usage
@@ -34,4 +34,4 @@ const { isProxy, dropIp, checkIp, openFile } = require('npm-layer7-protections')
 checkIp(IP, 'IP2PROXY_DATABASE_FILE.bin'); // checkIp uses both modules: isProxy and dropIp
 ```
 ## Note
-> 'IP2PROXY_DATABASE_FILE.bin' is an example name of the file that you can download via this site: https://lite.ip2location.com/database/px1-ip-country
+> IP2PROXY_DATABASE_FILE.bin is an example name of the file that you can download via this site: https://lite.ip2location.com/database/px1-ip-country
