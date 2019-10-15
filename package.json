@@ -20,7 +20,7 @@
   "author": "GoatSeller",
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^12.7.5",
+    "@types/node": "^12.7.12",
     "child_process": "^1.0.2",
     "ip2proxy-nodejs": "^2.1.0"
   },
@@ -34,12 +34,12 @@
     "@types/chai": "^4.2.0",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
-    "coveralls": "^3.0.6",
-    "mocha": "^6.2.0",
+    "coveralls": "^3.0.7",
+    "mocha": "^6.2.1",
     "nyc": "^14.1.1",
     "prettier": "1.18.2",
     "source-map-support": "^0.5.13",
-    "ts-node": "^8.3.0",
-    "typescript": "^3.6.2"
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
   }
 }
