@@ -6,13 +6,13 @@ export const database_file: string = 'IP2PROXY.BIN';
 
 export const checkIp = (ip: string | undefined, path_file: string) => {
   openFile(path_file)
-    .then((): Promise<any>  => {
+    .then(() => {
       return isProxy(ip);
     })
-    .then((): Promise<any> => {
+    .then(() => {
       return dropIp(ip);
     })
-    .then((): void => {
+    .then(() => {
       console.log('Success');
     })
     .catch(onError);
